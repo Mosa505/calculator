@@ -1,4 +1,3 @@
-
 package learn.calcultor;
 
 import java.awt.Color;
@@ -15,7 +14,9 @@ import javax.swing.JOptionPane;
 
 
 public class CalcultorGUI {
+    public static boolean isDarkmode = false;
     public static void main(String[] args) {
+        
         Font f1 =new Font("Times New Roman",Font.BOLD , 18) ;
         Font f2 =new Font("Times New Roman",Font.BOLD , 28) ;
         Font f3 = new Font("Times New Roman", Font.BOLD , 23);
@@ -481,9 +482,9 @@ public class CalcultorGUI {
        btnDarkMode.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-               boolean isDarkMode =false; 
+                
                
-               if(!isDarkMode){
+               if(!isDarkmode){
                        
                     
                     frame.getContentPane().setBackground(Color.black);
@@ -541,10 +542,71 @@ public class CalcultorGUI {
                     newvalue.setForeground(Color.WHITE);
                     
                     btnDarkMode.setText("^-^");
+                    isDarkmode=true;
                     
                     
                     
-                }
+                }else{
+        frame.getContentPane().setBackground(Color.WHITE);
+        OldValue.setBackground(Color.white);
+        OldValue.setOpaque(true);
+        op.setBackground(Color.white);
+        op.setOpaque(true);
+        newvalue.setBackground(Color.white);
+        newvalue.setOpaque(true);
+        btnequal.setBackground(Color.WHITE);
+        btnDarkMode.setBackground(Color.gray);
+        btnplus.setBackground(new Color(230, 230, 230));
+        btnmin.setBackground(new Color(230, 230, 230));
+        btnmult.setBackground(new Color(230, 230, 230));
+        btnremove.setBackground(new Color(230, 230, 230));
+        btnclear.setBackground(new Color(230, 230, 230));
+        btnsign.setBackground(new Color(230, 230, 230));
+        btndiv.setBackground(new Color(230, 230, 230));
+        btn0.setBackground(Color.white);
+        btn1.setBackground(Color.white);
+        btn2.setBackground(Color.white);
+        btn3.setBackground(Color.white);
+        btn4.setBackground(Color.white);
+        btn5.setBackground(Color.white);
+        btn6.setBackground(Color.white);
+        btn7.setBackground(Color.white);
+        btn8.setBackground(Color.white);
+        btn9.setBackground(Color.white);
+        btndot.setBackground(Color.white);
+        
+        ////////////////////////////////////////////////////////////////////
+        
+        btndot.setForeground(Color.black);
+        btnDarkMode.setForeground(Color.WHITE);
+        btnequal.setForeground(Color.black);
+        btnplus.setForeground(Color.black);
+        btnmin.setForeground(Color.black);
+        btnmult.setForeground(Color.black);
+        btnremove.setForeground(Color.black);
+        btnclear.setForeground(Color.black);
+        btnsign.setForeground(Color.black);
+        btndiv.setForeground(Color.black);
+        btn0.setForeground(Color.black);
+        btn1.setForeground(Color.black);
+        btn2.setForeground(Color.black);
+        btn3.setForeground(Color.black);
+        btn4.setForeground(Color.black);
+        btn5.setForeground(Color.black);
+        btn6.setForeground(Color.black);
+        btn7.setForeground(Color.black);
+        btn8.setForeground(Color.black);
+        btn9.setForeground(Color.black);
+        OldValue.setForeground(Color.black);
+        op.setForeground(Color.black);
+        newvalue.setForeground(Color.black);
+               btnDarkMode.setText("Dark");
+               isDarkmode=false;
+               
+               
+               
+               
+               }
                 
                 }
         });
@@ -601,3 +663,6 @@ public static double calc (double num1 , char c , double num2 ){
         }
     return result;
 }}
+
+       
+      
